@@ -15,6 +15,8 @@ const Booking = new Schema({
             quantity: Number,
             subTotal: Number,
             price: Number,
+            course: String,
+            stage: String
         }],
     },
     total: requiredString,
