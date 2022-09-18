@@ -3,59 +3,31 @@ var bookingRouter = express.Router();
 const Booking = require('../businessLogic/booking')
 
 bookingRouter.post('/create/', async (req, res) => {
-  try {
-    await Booking.addBooking(req, res)
-  } catch (error) {
-    res.status(500).send('internal error')
-  }
+  await Booking.addBooking(req, res)
 })
 
 bookingRouter.put('/update/', async (req, res) => {
-  try {
-    await Booking.updateBooking(req, res)
-  } catch (error) {
-    res.status(500).send('internal error')
-  }
+  await Booking.updateBooking(req, res)
 })
 
 bookingRouter.get('/get_one/:_id', async (req, res) => {
-  try {
-    await Booking.getOneBooking(req, res)
-  } catch (error) {
-    res.status(500).send('internal error')
-  }
+  await Booking.getOneBooking(req, res)
 })
 
 bookingRouter.get('/get_many/:_ids', async (req, res) => {
-  try {
-    await Booking.getManyBookings(req, res)
-  } catch (error) {
-    res.status(500).send('internal error')
-  }
+  await Booking.getManyBookings(req, res)
 })
 
 bookingRouter.get('/get_all/', async (req, res) => {
-  try {
-    await Booking.getAllBookings(req, res)
-  } catch (error) {
-    res.status(500).send('internal error')
-  }
+  await Booking.getAllBookings(req, res)
 })
 
 bookingRouter.delete('/delete/:_id', async (req, res) => {
-
-  try {
-    await Booking.deleteBooking(req, res)
-  } catch (error) {
-    res.status(500).send('internal error')
-  }
+  
+  await Booking.deleteBooking(req, res)
 })
 bookingRouter.delete('/delete_many/:_ids', async (req, res) => {
-  try {
-    await Booking.deleteManyBookings(req, res)
-  } catch (error) {
-    res.status(500).send('internal error')
-  }
+  await Booking.deleteManyBookings(req, res)
 })
 
 module.exports = bookingRouter;
