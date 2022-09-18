@@ -7,6 +7,7 @@ const requiredString = {
 
 const Booking = new Schema({
     customerName: requiredString,
+    phoneNumber: requiredString,
     books: {
         type: [{
             bookName: String,

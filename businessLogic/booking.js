@@ -33,6 +33,14 @@ class Booking {
         }
     }
 
+    async getAllBookings(req, res) {
+        try {
+            let books = await BookingModel.find()
+            return res.json({ books })
+        } catch (err) {
+            return res.sendStatus('400')
+        }
+    }
     async deletManyBooking(req, res) {
         try {
             let { _ids } = req.params
