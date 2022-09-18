@@ -23,7 +23,7 @@ class Booking {
         }
     }
 
-    async deletBooking(req, res) {
+    async deleteBooking(req, res) {
         try {
             let { _id } = req.params
             let book = await BookingModel.deleteOne({ _id })
