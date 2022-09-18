@@ -10,9 +10,11 @@ const Booking = new Schema({
     phoneNumber: requiredString,
     books: {
         type: [{
+            _id: String,
             bookName: String,
             quantity: Number,
             subTotal: Number,
+            price: Number,
         }],
     },
     total: requiredString,
