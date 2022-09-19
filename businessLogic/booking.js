@@ -17,6 +17,7 @@ class Booking {
         try {
             let { _id } = req.body
             let book = await BookingModel.findByIdAndUpdate(_id, { $set: req.body }, { new: true })
+            
             return res.json({ book })
         } catch (err) {
             return res.sendStatus('400')
